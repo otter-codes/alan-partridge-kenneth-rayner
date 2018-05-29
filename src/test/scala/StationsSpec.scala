@@ -10,6 +10,9 @@ class StationsSpec extends WordSpec with MustMatchers{
     "return a string if all of the listed stations appear in the input" in {
       Stations.stopChecker(List("Rejection","Disappointment","Backstabbing Central","Shattered Dreams Parkway","Newcastle")) mustEqual "Smell my cheese you mother!"
     }
+    "return a string if all of the listed stations appear in the input in a different order" in {
+      Stations.stopChecker(List("Disappointment","Backstabbing Central","Shattered Dreams Parkway","Rejection","Newcastle")) mustEqual "Smell my cheese you mother!"
+    }
     "return a string if not all of the listed stations appear in the input" in {
       Stations.stopChecker(List("Disappointment","Backstabbing Central","Shattered Dreams Parkway","Newcastle")) mustEqual "No, seriously, run. You will miss it."
     }
